@@ -53,7 +53,7 @@ public class base {
 
         driver = new EdgeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
 
         return driver;
     }
