@@ -52,8 +52,8 @@ public class  pages extends base{
 
         if (isDisplayed(titleLogin)) {
 
-            type("igomez", inputUser);
-            type("Itop123*", inputPassword);
+            type("", inputUser);
+            type("", inputPassword);
             click(btnSubmit);
 
             System.out.println("Inicio de sesión exitosa");

@@ -1,5 +1,4 @@
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -10,14 +9,14 @@ import java.time.Duration;
 public class itopTest {
 
     private WebDriver driver; // DECLARAMOS WEB DRIVER
-    pages pages   ; // OBJETO DE LA CLASS DE LOS LOCALIZADORES
+    pages pages; // OBJETO DE LA CLASS DE LOS LOCALIZADORES
     private WebDriverWait wait; // DECLARAMOS WebDriverWait ( TIEMPO DE ESPERA )
 
     @Before
     public void setUp() throws Exception {
         pages = new pages(driver); // LLAMAMOS LA CLASS DE LOS LOCALIZADORES
-        driver = pages.chromeDriverConnection(); // LLAMAMOS AL MÉTODO PARA INICIAR EL NAVEGADOR CHROME
-        //driver = pages.edgeDriverConnection(); // LLAMAMOS AL MÉTODO PARA INICIAR EL NAVEGADOR EDGE
+        //driver = pages.chromeDriverConnection(); // LLAMAMOS AL MÉTODO PARA INICIAR EL NAVEGADOR CHROME
+        driver = pages.edgeDriverConnection(); // LLAMAMOS AL MÉTODO PARA INICIAR EL NAVEGADOR EDGE
         wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // TIEMPO DE ESPERA DEL NAVEGADOR
         pages.visit("https://qv-apps.q-vision.co/itop/pages/UI.php");// LLAMAMOS AL METODO PARA RECIBIR LA URL
     }
@@ -55,10 +54,9 @@ public class itopTest {
 
         pages.ingresarDescripcion();
 
-        Assert.assertTrue(
-                "El flujo de creación de requerimiento se ejecutó correctamente",
-                true
-        );
+
+
+
 
 
     }
